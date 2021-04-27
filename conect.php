@@ -15,10 +15,10 @@ session_start();
 function conectarse() {
    error_reporting(E_ALL | E_STRICT); //para que muestre los errores
     ini_set('display_errors', "On");
-$usuario = "admin";
-$contrasena = "1234";// puede ser “” 
+$usuario = "id16351736_admin2";
+$contrasena = "Bosco@20202021";// puede ser “” 
 $servidor = "localhost";
-$basededatos = "tienda";
+$basededatos = "id16351736_tienda2";
 $conexion = mysqli_connect( $servidor, $usuario, $contrasena ) or die ("No se ha podido conectar al servidor de Base de datos");
 $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
 return $conexion;
@@ -26,6 +26,11 @@ return $conexion;
 }
 
 function pintaMenu(){
+    echo '<html>
+<head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+</head><body>';
 	echo '<nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <!-- Brand -->
   <a class="navbar-brand" href="http://andujar.inforbosco.nl/tienda">Bosco S.L</a>

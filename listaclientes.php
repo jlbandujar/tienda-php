@@ -1,16 +1,7 @@
-<html>
-    
-<head>
-	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
- 	<link rel="stylesheet" type="text/css" href="estilos.css"> 
-</head>
-<body>
-
 <?php
 include("conect.php");
-pintaMenu();
 compruebaLogeado();
+pintaMenu();
 $conexion=conectarse();
 $consulta = "SELECT * FROM CLIENTES";
 $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
